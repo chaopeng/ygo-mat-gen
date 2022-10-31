@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel='stylesheet' type='text/css' href='main.css'>
+    <script src='./main.js'></script>
+    <title>YGO Playmat Generator</title>
+</head>
+
+<h1>YGO Playmat Generator</h1>
+
+<form>
+    <label for='background-color'>Pure color background:</label>
+    <input type='color' id='background-color' value='#999999'>
+    <br><br>
+
+    <label for='background-file'>Or select file for background, want 7200*4200:</label>
+    <input type='file' id='background-file' accept="image/jpeg">
+    <br><br>
+
+    <label for='layout'>Layout:</label>
+    <select id='layout'>
+        <option value='master-4'>Master 4</option>
+        <option value='master-4-with-banish'>Master 4 + Banish</option>
+    </select>
+    <br><br>
+
+    <h2>Slot Style</h2>
+    <section>
+        <label for='rounded-corner'>Rounded corner, r (0-72):</label>
+        <input type='number' id='rounded-corner' value='0' min='0' max='72'>
+        <br><br>
+
+        <label for='slot-fill'>Slot background:</label>
+        <input type='color' id='slot-fill' value='#000000' onchange='onFillChange()'>
+        <br><br>
+
+        <label for='slot-fill-op'>Slot background Opacity (0-100):</label>
+        <input type='number' id='slot-fill-op' value='100' min='0' max='100' onchange='onFillOpChange()'>
+        <br><br>
+
+        <label for='stroke-width'>Stroke Width:</label>
+        <input type='number' id='stroke-width' value='0' min='0' max='60'>
+        <br><br>
+
+        <label for='slot-stroke'>Stroke color:</label>
+        <input type='color' id='slot-stroke' value='#FFFFFF' onchange='onStrokeChange()'>
+        <br><br>
+
+        <label for='slot-stroke-op'>Stroke Opacity (0-100):</label>
+        <input type='number' id='slot-stroke-op' value='100' min='0' max='100' onchange='onStrokeOpChange()'>
+        <br><br>
+    </section>
+
+    <h2>Per Slot Style</h2>
+    <table>
+        <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+                <td id='per-slot-ex1' class='per-slot'>
+                    <b>ex1</b><br>
+                </td>
+                <td></td>
+                <td id='per-slot-ex2' class='per-slot'>
+                    <b>ex2</b><br>
+                </td>
+                <td></td>
+                <td id='per-slot-banish' class='per-slot'>
+                    <b>banish</b><br>
+                </td>
+            </tr>
+            <tr>
+                <td id='per-slot-field' class='per-slot'>
+                    <b>field</b><br>
+                </td>
+                <td id='per-slot-m1' class='per-slot'>
+                    <b>m1</b><br>
+                </td>
+                <td id='per-slot-m2' class='per-slot'>
+                    <b>m2</b><br>
+                </td>
+                <td id='per-slot-m3' class='per-slot'>
+                    <b>m3</b><br>
+                </td>
+                <td id='per-slot-m4' class='per-slot'>
+                    <b>m4</b><br>
+                </td>
+                <td id='per-slot-m5' class='per-slot'>
+                    <b>m5</b><br>
+                </td>
+                <td id='per-slot-gy' class='per-slot'>
+                    <b>gy</b><br>
+                </td>
+            </tr>
+            <tr>
+                <td id='per-slot-exdeck' class='per-slot'>
+                    <b>exdeck</b><br>
+                </td>
+                <td id='per-slot-s1' class='per-slot'>
+                    <b>s1</b><br>
+                </td>
+                <td id='per-slot-s2' class='per-slot'>
+                    <b>s2</b><br>
+                </td>
+                <td id='per-slot-s3' class='per-slot'>
+                    <b>s3</b><br>
+                </td>
+                <td id='per-slot-s4' class='per-slot'>
+                    <b>s4</b><br>
+                </td>
+                <td id='per-slot-s5' class='per-slot'>
+                    <b>s5</b><br>
+                </td>
+                <td id='per-slot-deck' class='per-slot'>
+                    <b>deck</b><br>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+    <input type='reset' value='Reset' />
+    <input type='button' id='gen' onclick='generate()' value='Generate' />
+</form>
+
+<p>
+    Author: <a href='https://github.com/chaopeng'>github.com/chaopeng</a><br>
+    License: Apache-2.0<br>
+
+    How to use: <br>
+
+<ol>
+    <li>Choose your style</li>
+    <li>Smash 'Generate' button</li>
+    <li>Check the preview image, if you like it, right check menu - Save As</li>
+    <li>There is a reset zoom button at the end of page, to zoom back to 100%</li>
+</ol>
+</p>
+
+<div id='invisible'></div>
+
+<div id='preview'>
+    <h1>Preview:</h1>
+    <canvas id='canvas' width='7200' height='4200'></canvas>
+</div>
+
+<button id='reset-zoom' onclick='resetZoom()'>Reset Zoom</button>
+
+</html>

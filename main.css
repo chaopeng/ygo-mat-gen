@@ -1,0 +1,32 @@
+#invisible {
+    display: none;
+}
+
+form {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+form>section {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+table {
+    padding: 5px;
+}
+
+table>tbody>tr>td {
+    padding: 3px;
+    margin: 2px;
+}
+
+table>tbody>tr>td.per-slot {
+    border: 1px solid black;
+}
+
+#reset-zoom {
+    width: 400px;
+    height: 200px;
+    font-size: 50px;
+}
