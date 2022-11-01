@@ -15,6 +15,9 @@ async function generate() {
   // apply style
   applySlotStyle();
 
+  // add text
+  addTextToSVG();
+
   // load svg to img then draw to canvas.
   const svgURL = new XMLSerializer().serializeToString(svg);
   const img = new Image();
@@ -141,6 +144,26 @@ function generatePerSlotForm() {
 function addLineBreak(e) {
   const br = document.createElement('br');
   e.appendChild(br);
+}
+
+function addTextToSVG() {
+  const e = document.getElementById('text');
+  const checked = document.getElementById('include-text').checked;
+
+  if (!checked) {
+    e.setAttribute('visibility', 'hidden');
+    return;
+  }
+  const replace = document.getElementById('replace-text').value;
+  const fontSize = document.getElementById('font-size').value;
+  const textColor = document.getElementById('text-color').value;
+  const x = document.getElementById('text-x').value.toString()+'%';
+  const y = document.getElementById('text-y').value.toString()+'%';
+  e.textContent = replace;
+  e.setAttribute('font-size', fontSize);
+  e.setAttribute('fill', textColor);
+  e.setAttribute('x', x);
+  e.setAttribute('y', y);
 }
 
 function onFillChange() {

@@ -10,11 +10,11 @@
 
 <form>
     <label for='background-color'>Pure color background:</label>
-    <input type='color' id='background-color' value='#999999'>
+    <input type='color' id='background-color' value='#000000'>
     <br><br>
 
     <label for='background-file'>Or select file for background, want 7200*4200:</label>
-    <input type='file' id='background-file' accept="image/jpeg">
+    <input type='file' id='background-file' accept='image/jpeg'>
     <br><br>
 
     <label for='layout'>Layout:</label>
@@ -24,10 +24,28 @@
     </select>
     <br><br>
 
+    <h2>Text</h2>
+    <section>
+        <input type='checkbox' id='include-text' checked>
+        <label for='include-text'>include text:</label>
+        <input type='text' id='replace-text' size='50' value='Generated From ygomat.chaopeng.me'>
+        <br><br>
+        <label for='font-size'>Font size:</label>
+        <input type='text' id='font-size' value='8em'>
+        <br><br>
+        <label for='text-color'>text color:</label>
+        <input type='color' id='text-color' value='#FFFFFF'>
+        <br><br>
+        <label>text position in %:</label>
+        <input type='number' id='text-x' value='50' min='0' max='100'>
+        <input type='number' id='text-y' value='80' min='0' max='100'>
+    </section>
+    <br><br>
+
     <h2>Slot Style</h2>
     <section>
         <label for='rounded-corner'>Rounded corner, r (0-72):</label>
-        <input type='number' id='rounded-corner' value='0' min='0' max='72'>
+        <input type='number' id='rounded-corner' value='24' min='0' max='72'>
         <br><br>
 
         <label for='slot-fill'>Slot background:</label>
@@ -39,7 +57,7 @@
         <br><br>
 
         <label for='stroke-width'>Stroke Width:</label>
-        <input type='number' id='stroke-width' value='0' min='0' max='60'>
+        <input type='number' id='stroke-width' value='12' min='0' max='60'>
         <br><br>
 
         <label for='slot-stroke'>Stroke color:</label>
@@ -125,7 +143,7 @@
 
 <p>
     Author: <a href='https://github.com/chaopeng'>github.com/chaopeng</a><br>
-    Repo: <a href="https://github.com/chaopeng/ygo-mat-gen">github.com/chaopeng/ygo-mat-gen</a><br>
+    Repo: <a href='https://github.com/chaopeng/ygo-mat-gen'>github.com/chaopeng/ygo-mat-gen</a><br>
     License: Apache-2.0<br>
 
     How to use: <br>

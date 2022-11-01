@@ -19,4 +19,7 @@
     <rect id='s4' width='708' height='1032' x='4284' y='1932' class='slot' fill='black' />
     <rect id='s5' width='708' height='1032' x='5322' y='1932' class='slot' fill='black' />
     <rect id='deck' width='708' height='1032' x='6360' y='1932' class='slot' fill='black' />
+    <!--Credit-->
+    <text x='50%' y='80%' font-size='8em' font-family='sans-serif' dominant-baseline='middle' text-anchor='middle'
+        id='text'>Generated From ygomat.chaopeng.me</text>
 </svg>
