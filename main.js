@@ -157,13 +157,18 @@ function addTextToSVG() {
   const replace = document.getElementById('replace-text').value;
   const fontSize = document.getElementById('font-size').value;
   const textColor = document.getElementById('text-color').value;
-  const x = document.getElementById('text-x').value.toString()+'%';
-  const y = document.getElementById('text-y').value.toString()+'%';
+  const x = document.getElementById('text-x').value.toString() + '%';
+  const y = document.getElementById('text-y').value.toString() + '%';
+  const strokeWidth = document.getElementById('text-stroke-width').value.toString();
+  const strokeColor = document.getElementById('text-stroke-color').value;
+
   e.textContent = replace;
   e.setAttribute('font-size', fontSize);
   e.setAttribute('fill', textColor);
   e.setAttribute('x', x);
   e.setAttribute('y', y);
+  e.setAttribute('stroke-width', strokeWidth);
+  e.setAttribute('stroke', strokeColor);
 }
 
 function onFillChange() {
