@@ -1,25 +1,26 @@
 <svg id='mat' xmlns='http://www.w3.org/2000/svg' width='7200' height='4200'>
     <!--ex row-->
-    <rect id='ex1' width='708' height='1032' x='2208' y='-252' class='slot' fill='black' />
-    <rect id='ex2' width='708' height='1032' x='4284' y='-252' class='slot' fill='black' />
-    <rect id='banish' height='708' width='1032' x='5940' y='60' class='slot' fill='black' />
+    <rect id='ex1' width='708' height='1032' x='2208' y='-504' class='slot' fill='black' />
+    <rect id='ex2' width='708' height='1032' x='4284' y='-504' class='slot' fill='black' />
     <!--monsor row-->
-    <rect id='field' width='708' height='1032' x='132' y='840' class='slot' fill='black' />
-    <rect id='m1' width='708' height='1032' x='1170' y='840' class='slot' fill='black' />
-    <rect id='m2' width='708' height='1032' x='2208' y='840' class='slot' fill='black' />
-    <rect id='m3' width='708' height='1032' x='3246' y='840' class='slot' fill='black' />
-    <rect id='m4' width='708' height='1032' x='4284' y='840' class='slot' fill='black' />
-    <rect id='m5' width='708' height='1032' x='5322' y='840' class='slot' fill='black' />
-    <rect id='gy' width='708' height='1032' x='6360' y='840' class='slot' fill='black' />
+    <rect id='field' width='708' height='1032' x='132' y='588' class='slot' fill='black' />
+    <rect id='m1' width='708' height='1032' x='1170' y='588' class='slot' fill='black' />
+    <rect id='m2' width='708' height='1032' x='2208' y='588' class='slot' fill='black' />
+    <rect id='m3' width='708' height='1032' x='3246' y='588' class='slot' fill='black' />
+    <rect id='m4' width='708' height='1032' x='4284' y='588' class='slot' fill='black' />
+    <rect id='m5' width='708' height='1032' x='5322' y='588' class='slot' fill='black' />
     <!--spell/trap row-->
-    <rect id='exdeck' width='708' height='1032' x='132' y='1932' class='slot' fill='black' />
-    <rect id='s1' width='708' height='1032' x='1152' y='1932' class='slot' fill='black' />
-    <rect id='s2' width='708' height='1032' x='2208' y='1932' class='slot' fill='black' />
-    <rect id='s3' width='708' height='1032' x='3246' y='1932' class='slot' fill='black' />
-    <rect id='s4' width='708' height='1032' x='4284' y='1932' class='slot' fill='black' />
-    <rect id='s5' width='708' height='1032' x='5322' y='1932' class='slot' fill='black' />
-    <rect id='deck' width='708' height='1032' x='6360' y='1932' class='slot' fill='black' />
-    <!--Credit-->
+    <rect id='exdeck' width='708' height='1032' x='132' y='1680' class='slot' fill='black' />
+    <rect id='s1' width='708' height='1032' x='1170' y='1680' class='slot' fill='black' />
+    <rect id='s2' width='708' height='1032' x='2208' y='1680' class='slot' fill='black' />
+    <rect id='s3' width='708' height='1032' x='3246' y='1680' class='slot' fill='black' />
+    <rect id='s4' width='708' height='1032' x='4284' y='1680' class='slot' fill='black' />
+    <rect id='s5' width='708' height='1032' x='5322' y='1680' class='slot' fill='black' />
+    <!--banish, GY, deck column-->
+    <rect id='banish' width='708' height='1032' x='6360' y='132' class='slot' fill='black' />
+    <rect id='gy' width='708' height='1032' x='6360' y='1224' class='slot' fill='black' />
+    <rect id='deck' width='708' height='1032' x='6360' y='2316' class='slot' fill='black' />
+    <!--Text-->
     <text x='50%' y='80%' font-size='8em' font-family='sans-serif' dominant-baseline='middle' text-anchor='middle'
-        id='text'>Generated From ygomat.chaopeng.me</text>
+        paint-order='stroke' id='text'>Generated From ygomat.chaopeng.me</text>
 </svg>
