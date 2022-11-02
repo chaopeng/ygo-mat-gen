@@ -40,7 +40,7 @@ async function drawCanvasBackground() {
   if (file.value === '') {
     // use pure color as background
     ctx.fillStyle = bg.value;
-    ctx.fillRect(0, 0, 7200, 4200);
+    ctx.fillRect(0, 0, 7320, 4320);
   } else {
     const reader = new FileReader();
     reader.readAsDataURL(file.files[0]);
